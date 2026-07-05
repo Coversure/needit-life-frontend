@@ -207,7 +207,7 @@ export function HomeHero() {
       <section className="relative hidden h-screen w-screen overflow-hidden bg-black/5 shadow-md min-[1440px]:block">
         <div className="flex h-full w-full flex-row items-center justify-between bg-white">
           <Image
-            src="/images/family-hero.webp"
+            src="/images/family-hero.png"
             alt="A family spending time together near the New Zealand coast"
             priority
             fill
