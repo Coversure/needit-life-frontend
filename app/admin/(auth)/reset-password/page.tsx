@@ -1,0 +1,8 @@
+import Image from "next/image";
+import { KeyRound } from "lucide-react";
+
+export default function ResetPasswordPage() {
+  return (
+    <main className="flex min-h-screen items-center justify-center bg-soft-sage p-5"><div className="w-full max-w-md rounded-[2rem] border border-line bg-white p-7 shadow-xl sm:p-9"><Image src="/images/needit-life-logo.png" alt="NeedIt Life" width={180} height={60} className="h-auto w-40" /><div className="mt-8 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-sage text-brand-green"><KeyRound className="h-6 w-6" /></div><h1 className="mt-5 text-3xl font-extrabold tracking-[-0.04em] text-forest-950">Create a new password</h1><p className="mt-3 text-sm leading-6 text-muted">Use at least 12 characters with uppercase, lowercase, a number and a symbol.</p><form className="mt-7 space-y-5"><label className="block"><span className="mb-2 block text-sm font-extrabold text-forest-950">New password</span><input required minLength={12} type="password" className="min-h-12 w-full rounded-2xl border border-line px-4 text-sm font-semibold focus:border-brand-green focus:ring-4 focus:ring-brand-green/10" /></label><label className="block"><span className="mb-2 block text-sm font-extrabold text-forest-950">Confirm password</span><input required minLength={12} type="password" className="min-h-12 w-full rounded-2xl border border-line px-4 text-sm font-semibold focus:border-brand-green focus:ring-4 focus:ring-brand-green/10" /></label><button type="submit" className="min-h-12 w-full rounded-2xl bg-forest-900 px-5 text-sm font-extrabold text-white">Update password</button></form></div></main>
+  );
+}

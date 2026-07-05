@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+:root {
+  --forest-950: #052d26;
+  --forest-900: #073b32;
+  --forest-800: #0a4a3d;
+  --forest-700: #0f5d4b;
+  --green-600: #46a832;
+  --green-500: #59bd38;
+  --green-100: #eaf6e6;
+  --sage-100: #f1f5ef;
+  --cream-50: #fdfcf9;
+  --ink-900: #16221f;
+  --ink-600: #53615d;
+  --border: #dce6df;
+}
+
+@theme inline {
+  --font-sans: "Manrope", "Avenir Next", "Segoe UI", Arial, sans-serif;
+  --color-forest-950: var(--forest-950);
+  --color-forest-900: var(--forest-900);
+  --color-forest-800: var(--forest-800);
+  --color-forest-700: var(--forest-700);
+  --color-brand-green: var(--green-600);
+  --color-brand-lime: var(--green-500);
+  --color-brand-sage: var(--green-100);
+  --color-soft-sage: var(--sage-100);
+  --color-warm-white: var(--cream-50);
+  --color-ink: var(--ink-900);
+  --color-muted: var(--ink-600);
+  --color-line: var(--border);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream-50);
+  color: var(--ink-900);
+  font-family:
+    "Manrope", "Avenir Next", "Segoe UI", Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #bfe9b1;
+  color: var(--forest-950);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  outline-color: var(--green-600);
+  outline-offset: 3px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container-shell {
+  width: min(100% - 2rem, 80rem);
+  margin-inline: auto;
+}
+
+.section-space {
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.soft-grid {
+  background-image:
+    linear-gradient(rgba(7, 59, 50, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7, 59, 50, 0.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.card-shadow {
+  box-shadow: 0 22px 60px rgba(5, 45, 38, 0.09);
+}
+
+.admin-table-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #b9c8c0 transparent;
+}
+
+/* grids */
+
+/* .grid-responsive-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 1300px) {
+  .grid-responsive-two {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+} */
+
+.grid-responsive-two {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+  .grid-responsive-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1300px) {
+  .grid-responsive-two {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* home page */
+
+/* NeedIt Life responsive hero image positioning */
+
+.hero-responsive-image {
+  object-position: 60% center;
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+/* Tablet portrait */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-responsive-image {
+    object-position: 58% 45%;
+    transform: scale(1.04);
+    transform-origin: center;
+  }
+}
+
+/* Tablet landscape */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-responsive-image {
+    object-position: 72% center;
+    transform: scale(1.18);
+    transform-origin: right center;
+  }
+}
