@@ -4,7 +4,6 @@ import { CheckCircle2, Eye, HandHeart, Leaf, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
-import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -173,7 +172,7 @@ export default function AboutUsPage() {
               Check your options
             </ButtonLink>
 
-            <ButtonLink href="/contact" variant="light">
+            <ButtonLink href="/contact" variant="primary">
               Contact our team
             </ButtonLink>
           </div>
