@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Phone, X } from "lucide-react";
+import { CalendarDays, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { mainNavigation, siteConfig } from "@/lib/site";
+import { mainNavigation } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -62,16 +62,16 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 xl:flex">
-          <a
-            href={`tel:${siteConfig.newBusinessPhone.replace(/\s/g, "")}`}
-            className="inline-flex min-h-12 items-center gap-2 rounded-2xl border border-line px-4 text-sm font-extrabold text-forest-900 transition hover:border-brand-green hover:bg-brand-sage"
+          <Link
+            href="/book-an-appointment"
+            className="inline-flex min-h-12 items-center gap-2 rounded-2xl border border-line px-4 text-sm md:text-base font-bold text-forest-900 transition hover:border-brand-green hover:bg-brand-sage"
           >
-            <Phone className="h-4 w-4" aria-hidden="true" />
-            {siteConfig.newBusinessPhone}
-          </a>
+            <CalendarDays className="h-4 w-4" aria-hidden="true" />
+            Book an Appointment
+          </Link>
           <ButtonLink
             href="/get-a-quote"
-            className="px-6 text-md md:text-[16px]"
+            className="px-6 text-md md:text-base font-semibold"
           >
             Get a Quote
           </ButtonLink>
@@ -104,12 +104,14 @@ export function Header() {
               ))}
             </nav>
             <div className="mt-4 grid gap-3 border-t border-line pt-4 sm:grid-cols-2">
-              <a
-                href={`tel:${siteConfig.newBusinessPhone.replace(/\s/g, "")}`}
+              <Link
+                href="/book-an-appointment"
+                onClick={() => setOpen(false)}
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl border border-line px-4 font-extrabold text-forest-900"
               >
-                <Phone className="h-4 w-4" /> {siteConfig.newBusinessPhone}
-              </a>
+                <CalendarDays className="h-4 w-4" aria-hidden="true" />
+                Book an Appointment
+              </Link>
               <ButtonLink href="/get-a-quote" className="w-full" arrow>
                 Get a Quote
               </ButtonLink>

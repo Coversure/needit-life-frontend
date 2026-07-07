@@ -151,24 +151,6 @@ function ResponsiveHeroContent() {
           </ButtonLink>
         </div>
 
-        {/* <div className="mt-7 flex flex-col gap-3 sm:flex-row lg:flex-col min-[1140px]:flex-row">
-          <ButtonLink
-            href="/get-a-quote"
-            className="w-full justify-center text-base font-semibold sm:w-auto sm:min-w-48 lg:w-full min-[1140px]:w-auto"
-            arrow
-          >
-            Get a Quote
-          </ButtonLink>
-
-          <ButtonLink
-            href="/#how-it-works"
-            variant="secondary"
-            className="w-full justify-center text-base font-semibold sm:w-auto sm:min-w-48 lg:w-full min-[1140px]:w-auto"
-          >
-            How It Works
-          </ButtonLink>
-        </div> */}
-
         <TrustpilotRating responsive />
       </div>
     </div>

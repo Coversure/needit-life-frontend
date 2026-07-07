@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { CheckCircle2, Eye, HandHeart, Leaf, ShieldCheck } from "lucide-react";
+import {
+  CheckCircle2,
+  Eye,
+  HandHeart,
+  HeartPulse,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
 
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -8,34 +15,115 @@ import { PageHero } from "@/components/ui/page-hero";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn how NeedIt Life helps New Zealanders explore straightforward life cover with clear information and local support.",
+    "Learn how NeedIt Life helps New Zealanders access straightforward guaranteed-acceptance life insurance, including people who may have previously been declined because of their medical history.",
 };
 
 const values = [
   {
     icon: Eye,
     title: "Clear information",
-    text: "We explain the important features, waiting periods and exclusions in language that is easier to understand.",
+    text: (
+      <>
+        We explain{" "}
+        <strong className="font-extrabold text-forest-900">
+          cover amounts
+        </strong>
+        ,{" "}
+        <strong className="font-extrabold text-forest-900">
+          waiting periods
+        </strong>
+        , exclusions and important policy conditions in straightforward
+        language.
+      </>
+    ),
   },
   {
     icon: HandHeart,
     title: "Respectful support",
-    text: "Every person deserves to be treated with care, regardless of their medical history or previous insurance experience.",
+    text: (
+      <>
+        Every person deserves to explore their protection options{" "}
+        <strong className="font-extrabold text-forest-900">
+          without judgement
+        </strong>
+        , regardless of their health or insurance history.
+      </>
+    ),
   },
   {
     icon: ShieldCheck,
-    title: "Dependable protection",
-    text: "We help customers understand their cover and what support is available throughout the life of their policy.",
+    title: "Accessible protection",
+    text: (
+      <>
+        Our guaranteed-acceptance cover provides another path to protection{" "}
+        <strong className="font-extrabold text-forest-900">
+          without medical examinations or medical underwriting
+        </strong>
+        .
+      </>
+    ),
   },
 ];
 
-const benefits = [
-  "Straightforward cover",
-  "Options for people with pre-existing conditions",
-  "A simple application process",
+const coverFeatures = [
+  {
+    title: "Guaranteed acceptance",
+    text: (
+      <>
+        There are{" "}
+        <strong className="font-extrabold text-forest-900">
+          no medical examinations
+        </strong>{" "}
+        or medical underwriting requirements. Eligibility is confirmed through
+        simple application questions.
+      </>
+    ),
+  },
+  {
+    title: "Flexible cover amounts",
+    text: (
+      <>
+        Choose cover from{" "}
+        <strong className="font-extrabold text-forest-900">
+          $50,000 up to $300,000
+        </strong>{" "}
+        per insured person, subject to eligibility requirements and policy
+        limits.
+      </>
+    ),
+  },
+  {
+    title: "Death and terminal illness protection",
+    text: (
+      <>
+        A{" "}
+        <strong className="font-extrabold text-forest-900">
+          one-off lump-sum benefit
+        </strong>{" "}
+        may be paid following death or the diagnosis of a terminal illness, as
+        defined in the policy.
+      </>
+    ),
+  },
+  {
+    title: "Lifetime protection",
+    text: (
+      <>
+        Cover can remain in place{" "}
+        <strong className="font-extrabold text-forest-900">for life</strong>,
+        provided premiums continue to be paid and the policy conditions are met.
+      </>
+    ),
+  },
+];
+
+const customerBenefits = [
+  "No medical examinations",
+  "No medical underwriting",
+  "Guaranteed acceptance for eligible applicants",
+  "Available to New Zealand residents aged 18 to 65",
+  "Individual and joint policy options",
   "New Zealand-based customer support",
-  "Clear information about waiting periods and exclusions",
-  "Support for customers and their families when it matters",
 ];
 
 export default function AboutUsPage() {
@@ -43,109 +131,188 @@ export default function AboutUsPage() {
     <>
       <PageHero
         eyebrow="About NeedIt Life"
-        title="Life cover made clearer for real life"
-        description="NeedIt Life helps New Zealanders explore straightforward life cover with clear information, respectful support and a simpler application experience."
+        title="A path to protection for more New Zealanders"
+        description="NeedIt Life offers a guaranteed-acceptance life insurance option designed to make protection simpler and more accessible, including for people who may have previously been declined because of their medical history."
       />
 
-      <section className="section-space bg-white">
-        <Container className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="soft-grid relative min-h-[420px] overflow-hidden rounded-[2rem] bg-forest-950 p-9 text-white">
-            <Leaf className="h-12 w-12 text-brand-lime" />
-
-            <p className="mt-24 text-sm font-extrabold uppercase tracking-[0.18em] text-brand-lime">
-              Our purpose
-            </p>
-
-            <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.045em]">
-              Help more New Zealanders find a path to protection
-            </h2>
-
-            <p className="mt-5 text-base leading-8 text-white/70">
-              Life does not always follow a simple path. NeedIt Life exists to
-              help people understand their cover options and feel supported
-              while making an important decision for themselves and their
-              families.
-            </p>
-          </div>
-
-          <div>
-            <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-green">
+      {/* Who we are — now paired with the benefits checklist it actually
+          relates to, rather than the purpose statement above */}
+      <section className="section-space bg-warm-white border-b border-line">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
+          <div className="max-w-2xl">
+            <p className="text-sm md:text-base font-extrabold uppercase tracking-[0.18em] text-brand-green">
               Who we are
             </p>
 
-            <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.045em] text-forest-950">
-              Straightforward protection backed by real support
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-[-0.045em] text-forest-950 sm:text-4xl lg:text-[2.75rem]">
+              Straightforward life cover for real life
             </h2>
 
-            <p className="mt-5 text-base leading-8 text-muted">
-              We provide access to quick cover for people looking for a simpler
-              way to protect the people who matter most.
-            </p>
+            <div className="mt-6 space-y-5 text-base md:text-lg leading-8 text-muted">
+              <p>
+                NeedIt Life helps everyday New Zealanders explore a simpler way
+                to protect themselves and their families. We provide{" "}
+                <strong className="font-extrabold text-forest-900">
+                  guaranteed-acceptance life insurance
+                </strong>{" "}
+                without medical examinations or traditional medical
+                underwriting.
+              </p>
 
-            <p className="mt-4 text-base leading-8 text-muted">
-              NeedIt Life provides an option for people who have previously
-              found it difficult to obtain life cover because of their health or
-              medical history. Eligibility, waiting periods, exclusions and
-              policy terms apply.
-            </p>
+              <p>
+                Eligible customers may be able to obtain protection even if they
+                have a{" "}
+                <strong className="font-extrabold text-forest-900">
+                  pre-existing medical condition
+                </strong>{" "}
+                or have{" "}
+                <strong className="font-extrabold text-forest-900">
+                  previously been declined
+                </strong>{" "}
+                for another life insurance policy.
+              </p>
 
-            <ul className="mt-7 grid gap-4 sm:grid-cols-2">
-              {benefits.map((item) => (
+              <p>
+                The cover can provide a{" "}
+                <strong className="font-extrabold text-forest-900">
+                  lump-sum benefit
+                </strong>{" "}
+                following death or the diagnosis of a terminal illness, as
+                defined in the policy. It may help with everyday expenses,
+                debts, funeral costs or other financial commitments.
+              </p>
+            </div>
+
+            <ButtonLink
+              href="/get-a-quote"
+              variant="primary"
+              className="mt-8 font-semibold"
+              arrow
+            >
+              Explore your cover options
+            </ButtonLink>
+          </div>
+
+          <aside className="rounded-[2rem] border border-line bg-soft-sage p-7 shadow-sm sm:p-8">
+            <p className="text-sm md:text-base font-extrabold uppercase tracking-[0.16em] text-brand-green">
+              At a glance
+            </p>
+            <h3 className="mt-2 text-xl font-extrabold tracking-[-0.03em] text-forest-950">
+              What makes our cover different
+            </h3>
+
+            <ul className="mt-6 space-y-3">
+              {customerBenefits.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-3 text-sm font-extrabold text-forest-900"
+                  className="flex items-start gap-3 rounded-2xl border border-line bg-white px-4 py-3.5 text-sm md:text-base font-extrabold leading-6 text-forest-900 shadow-sm"
                 >
-                  <CheckCircle2 className="h-5 w-5 shrink-0 text-brand-green" />
+                  <CheckCircle2
+                    className="mt-0.5 h-5 w-5 shrink-0 text-brand-green"
+                    aria-hidden="true"
+                  />
+
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
+          </aside>
+        </Container>
+      </section>
 
-            <ButtonLink
-              href="/quick-life-insurance"
-              variant="secondary"
-              className="mt-8"
-              arrow
-            >
-              Explore NeedIt Life
-            </ButtonLink>
+      {/* Our purpose — now a standalone full-width statement instead of
+          sharing a grid row with the "Who we are" copy */}
+      <section className="section-space bg-white pb-0">
+        <Container>
+          <div className="soft-grid relative overflow-hidden rounded-[2rem] bg-forest-950 px-7 py-8 text-white shadow-xl shadow-forest-950/10 sm:px-12 sm:py-16 lg:px-20">
+            <div
+              className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-green/10 blur-3xl"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute -bottom-28 -left-20 h-72 w-72 rounded-full bg-brand-lime/10 blur-3xl"
+              aria-hidden="true"
+            />
+
+            <div className="relative mx-auto max-w-3xl text-center">
+              <div className="flex items-center justify-center gap-3">
+                <HeartPulse
+                  className="h-6 w-6 text-brand-lime"
+                  aria-hidden="true"
+                />
+                <p className="text-sm md:text-base font-extrabold uppercase tracking-[0.18em] text-brand-lime sm:text-base">
+                  Our purpose
+                </p>
+              </div>
+
+              <h2 className="mt-6 text-3xl font-extrabold leading-tight tracking-[-0.045em] sm:text-4xl lg:text-[2.65rem]">
+                Helping people find protection when other options may not be
+                available
+              </h2>
+
+              <p className="mx-auto mt-10 max-w-2xl text-base md:text-lg leading-8 text-white/75 ">
+                A{" "}
+                <strong className="font-extrabold text-white">
+                  medical condition
+                </strong>{" "}
+                or{" "}
+                <strong className="font-extrabold text-white">
+                  previous insurance decision
+                </strong>{" "}
+                should not necessarily prevent someone from having any
+                protection at all. NeedIt Life offers{" "}
+                <strong className="font-extrabold text-white">
+                  guaranteed-acceptance life insurance
+                </strong>{" "}
+                designed to give more New Zealanders a path to protection.
+              </p>
+            </div>
           </div>
         </Container>
       </section>
 
       <section className="section-space bg-soft-sage">
         <Container>
-          <div className="mx-auto mb-10 max-w-2xl text-center">
-            <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-green">
-              What matters to us
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <p className="text-sm md:text-base font-extrabold uppercase tracking-[0.18em] text-brand-green">
+              Why NeedIt Life
             </p>
 
-            <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.045em] text-forest-950">
-              A more human approach to life cover
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-[-0.045em] text-forest-950 sm:text-4xl lg:text-[2.75rem]">
+              Life insurance should not feel out of reach
             </h2>
 
-            <p className="mt-4 text-base leading-8 text-muted">
-              We want customers to feel informed, respected and supported from
-              their first enquiry through to the moments when their cover may be
-              needed.
+            <p className="mx-auto mt-5 max-w-2xl text-base md:text-lg leading-8 text-muted">
+              Our cover is designed as a{" "}
+              <strong className="font-extrabold text-forest-900">
+                more accessible alternative
+              </strong>{" "}
+              for people whose health or medical history has made obtaining
+              protection difficult.
             </p>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {values.map(({ icon: Icon, title, text }) => (
+          <div className="grid gap-5 md:grid-cols-2">
+            {coverFeatures.map(({ title, text }, index) => (
               <article
                 key={title}
-                className="rounded-[1.75rem] border border-line bg-white p-7"
+                className="group h-full rounded-[1.75rem] border border-line bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
-                  <Icon className="h-6 w-6 text-brand-green" />
+                <div className="flex items-start gap-4 sm:gap-5">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-green-100 text-base font-extrabold text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
+                    {index + 1}
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-extrabold leading-snug text-forest-950">
+                      {title}
+                    </h3>
+
+                    <p className="mt-5 text-base md:text-[17px] leading-7 text-muted sm:text-base">
+                      {text}
+                    </p>
+                  </div>
                 </div>
-
-                <h3 className="mt-5 text-xl font-extrabold text-forest-950">
-                  {title}
-                </h3>
-
-                <p className="mt-3 text-sm leading-7 text-muted">{text}</p>
               </article>
             ))}
           </div>
@@ -153,28 +320,236 @@ export default function AboutUsPage() {
       </section>
 
       <section className="section-space bg-white">
-        <Container className="rounded-[2rem] bg-forest-950 px-7 py-12 text-center text-white sm:px-12">
-          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-brand-lime">
-            Protection for real life
-          </p>
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
+          <div className="max-w-2xl">
+            <p className="text-sm md:text-base font-extrabold uppercase tracking-[0.18em] text-brand-green">
+              How the cover helps
+            </p>
 
-          <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-extrabold tracking-[-0.045em]">
-            Understand your options and take the next step with confidence
-          </h2>
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-[-0.045em] text-forest-950 sm:text-4xl lg:text-[2.75rem]">
+              Financial support when it matters most
+            </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-white/70">
-            Explore how NeedIt Life works, including eligibility, cover amounts,
-            waiting periods and important exclusions.
-          </p>
+            <div className="mt-6 space-y-5 text-base md:text-lg leading-8 text-muted ">
+              <p>
+                The policy pays a{" "}
+                <strong className="font-extrabold text-forest-900">
+                  one-off lump-sum benefit
+                </strong>{" "}
+                if the insured person passes away or is diagnosed with a
+                terminal illness that meets the policy definition.
+              </p>
 
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <ButtonLink href="/get-a-quote" variant="primary" arrow>
-              Check your options
+              <p>
+                The benefit is{" "}
+                <strong className="font-extrabold text-forest-900">
+                  not restricted
+                </strong>{" "}
+                to a particular expense. It may help with mortgage or rent
+                payments, household costs, outstanding debts, funeral expenses
+                or other financial needs.
+              </p>
+
+              <p>
+                Cover can remain in place{" "}
+                <strong className="font-extrabold text-forest-900">
+                  for life
+                </strong>{" "}
+                while the required premiums continue to be paid. The policy also
+                includes an{" "}
+                <strong className="font-extrabold text-forest-900">
+                  automatic annual benefit increase of 3%
+                </strong>
+                , unless the customer chooses to opt out.
+              </p>
+            </div>
+
+            <ButtonLink
+              href="/get-a-quote"
+              variant="primary"
+              className="mt-8 font-semibold"
+              arrow
+            >
+              Get a life insurance quote
             </ButtonLink>
+          </div>
 
-            <ButtonLink href="/contact" variant="primary">
-              Contact our team
-            </ButtonLink>
+          <aside className="rounded-[2rem] border border-line bg-soft-sage p-7 shadow-sm sm:p-10">
+            <div className="flex items-center gap-4">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white">
+                <Users
+                  className="h-7 w-7 text-brand-green"
+                  aria-hidden="true"
+                />
+              </div>
+
+              <div>
+                <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-brand-green">
+                  Eligibility
+                </p>
+                <h3 className="mt-1 text-2xl font-extrabold tracking-[-0.035em] text-forest-950">
+                  Who can apply?
+                </h3>
+              </div>
+            </div>
+
+            <ul className="mt-7 space-y-3">
+              <li className="flex gap-3 rounded-2xl bg-white p-4 text-sm md:text-base font-bold leading-7 text-forest-900 shadow-sm">
+                <CheckCircle2
+                  className="mt-1 h-5 w-5 shrink-0 text-brand-green"
+                  aria-hidden="true"
+                />
+
+                <span>
+                  <strong className="font-extrabold">
+                    New Zealand residents
+                  </strong>{" "}
+                  aged 18 to 65.
+                </span>
+              </li>
+
+              <li className="flex gap-3 rounded-2xl bg-white p-4 text-sm md:text-base font-bold leading-7 text-forest-900 shadow-sm">
+                <CheckCircle2
+                  className="mt-1 h-5 w-5 shrink-0 text-brand-green"
+                  aria-hidden="true"
+                />
+
+                <span>
+                  Applicants seeking an{" "}
+                  <strong className="font-extrabold">
+                    individual or joint policy
+                  </strong>
+                  .
+                </span>
+              </li>
+
+              <li className="flex gap-3 rounded-2xl bg-white p-4 text-sm md:text-base font-bold leading-7 text-forest-900 shadow-sm">
+                <CheckCircle2
+                  className="mt-1 h-5 w-5 shrink-0 text-brand-green"
+                  aria-hidden="true"
+                />
+
+                <span>
+                  People with{" "}
+                  <strong className="font-extrabold">
+                    pre-existing medical conditions
+                  </strong>
+                  , subject to applicable waiting periods, exclusions and policy
+                  terms.
+                </span>
+              </li>
+            </ul>
+
+            <div className="mt-6 rounded-2xl border border-line bg-warm-white p-5 shadow-md">
+              <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-amber-800">
+                Important eligibility note
+              </p>
+              <p className="mt-2 text-sm md:text-base leading-7 text-amber-950/80">
+                Cover is{" "}
+                <strong className="font-extrabold text-amber-950">
+                  not available
+                </strong>{" "}
+                to an applicant who has been diagnosed with a terminal illness
+                or is receiving palliative or hospice care when they apply.
+              </p>
+            </div>
+          </aside>
+        </Container>
+      </section>
+
+      <section className="section-space bg-soft-sage">
+        <Container>
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <p className="text-sm md:text-base font-extrabold uppercase tracking-[0.18em] text-brand-green">
+              What matters to us
+            </p>
+
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-[-0.045em] text-forest-950 sm:text-4xl lg:text-[2.75rem]">
+              A more understanding approach to life cover
+            </h2>
+
+            <p className="mt-5 text-base md:text-lg leading-8 text-muted ">
+              We want every customer to feel{" "}
+              <strong className="font-extrabold text-forest-900">
+                informed, respected and supported
+              </strong>{" "}
+              when considering protection for themselves and their family.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {values.map(({ icon: Icon, title, text }) => (
+              <article
+                key={title}
+                className="h-full rounded-[1.75rem] border border-line bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-green-100">
+                  <Icon
+                    className="h-6 w-6 text-brand-green"
+                    aria-hidden="true"
+                  />
+                </div>
+
+                <h3 className="mt-5 text-xl font-extrabold text-forest-950">
+                  {title}
+                </h3>
+
+                <p className="mt-3 text-sm md:text-[17px] leading-7 text-muted">
+                  {text}
+                </p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="section-space bg-white">
+        <Container className="relative overflow-hidden rounded-[2rem] bg-forest-950 px-7 py-12 text-center text-white shadow-xl shadow-forest-950/10 sm:px-12 sm:py-16">
+          <div
+            className="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-green/15 blur-3xl"
+            aria-hidden="true"
+          />
+
+          <div className="relative">
+            <p className="text-sm md:text-base font-extrabold uppercase tracking-[0.18em] text-brand-lime">
+              Protection for real life
+            </p>
+
+            <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-extrabold leading-tight tracking-[-0.045em] sm:text-4xl lg:text-[2.75rem]">
+              <span className="text-brand-lime">Previously declined</span> for
+              life insurance? There may still be an option available
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/75 ">
+              Learn more about{" "}
+              <strong className="font-extrabold text-white">
+                guaranteed acceptance
+              </strong>
+              , available cover amounts, waiting periods, exclusions and the
+              important conditions that apply to your policy.
+            </p>
+
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+              <ButtonLink href="/get-a-quote" variant="primary" arrow>
+                Check your options
+              </ButtonLink>
+
+              <ButtonLink href="/book-an-appointment" variant="primary">
+                Book an appointment
+              </ButtonLink>
+            </div>
+
+            <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
+              <p className="text-sm leading-6 text-white/60">
+                Eligibility requirements, premiums, waiting periods, exclusions
+                and policy terms apply.{" "}
+                <strong className="font-extrabold text-white/80">
+                  Guaranteed acceptance
+                </strong>{" "}
+                does not mean every claim is automatically covered. Please
+                review the policy wording before applying.
+              </p>
+            </div>
           </div>
         </Container>
       </section>

@@ -24,17 +24,19 @@ export function FinalCta() {
           <div className="relative mt-8 flex flex-col gap-3 sm:flex-row lg:mt-0 lg:flex-col">
             <ButtonLink
               href="/get-a-quote"
-              className="bg-brand-lime px-8 text-forest-950 hover:bg-white"
+              className="bg-brand-lime px-8 text-forest-200 hover:bg-white"
               arrow
             >
               Start your enquiry
             </ButtonLink>
-            <a
-              href={`tel:${siteConfig.newBusinessPhone.replace(/\s/g, "")}`}
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl border border-white/25 px-6 text-sm font-extrabold text-white hover:bg-white/10"
+            <ButtonLink
+              href="/book-an-appointment"
+              variant="primary"
+              className="bg-white px-8 text-forest-950 hover:bg-soft-sage"
+              arrow
             >
-              <Phone className="h-4 w-4" /> {siteConfig.newBusinessPhone}
-            </a>
+              Speak with a financial adviser
+            </ButtonLink>
           </div>
         </div>
       </Container>

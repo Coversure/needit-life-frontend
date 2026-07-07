@@ -21,7 +21,7 @@ export const mainNavigation = [
 
 export const footerNavigation = {
   cover: [
-    { label: "NeedIt Life Insurance", href: "/quick-life-insurance" },
+    { label: "NeedIt Life Insurance", href: "/needit-life-insurance" },
     { label: "How It Works", href: "/#how-it-works" },
     { label: "Get a Quote", href: "/get-a-quote" },
     { label: "FAQs", href: "/faqs" },
@@ -43,6 +43,7 @@ export const footerNavigation = {
     { label: "Existing Customers", href: "/existing-customers" },
     { label: "Claims", href: "/claims" },
     { label: "Contact", href: "/contact" },
+    { label: "Book an Appointment", href: "/book-an-appointment" },
     { label: "Complaints", href: "/complaints" },
   ],
   legal: [
