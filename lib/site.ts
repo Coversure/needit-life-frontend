@@ -21,27 +21,18 @@ export const mainNavigation = [
 
 export const footerNavigation = {
   cover: [
-    { label: "NeedIt Life Insurance", href: "/needit-life-insurance" },
+    { label: "About Us", href: "/about-us" },
     { label: "How It Works", href: "/#how-it-works" },
     { label: "Get a Quote", href: "/get-a-quote" },
     { label: "FAQs", href: "/faqs" },
-  ],
-  company: [
-    { label: "About Us", href: "/about-us" },
-    { label: "Financial Strength", href: "/financial-strength" },
-    { label: "Fair Conduct Programme", href: "/fair-conduct-programme" },
-    {
-      label: "Financial Advice Disclosure",
-      href: "/financial-advice-disclosure",
-    },
   ],
   resources: [
     { label: "Guides & Articles", href: "/resources" },
     { label: "Documents & Forms", href: "/resources/documents-and-forms" },
   ],
   support: [
-    { label: "Existing Customers", href: "/existing-customers" },
-    { label: "Claims", href: "/claims" },
+    // { label: "Existing Customers", href: "/existing-customers" },
+    // { label: "Claims", href: "/claims" },
     { label: "Contact", href: "/contact" },
     { label: "Book an Appointment", href: "/book-an-appointment" },
     { label: "Complaints", href: "/complaints" },
@@ -49,5 +40,9 @@ export const footerNavigation = {
   legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms & Conditions", href: "/terms-and-conditions" },
+    {
+      label: "Financial Advice Disclosure",
+      href: "/financial-advice-disclosure",
+    },
   ],
 };

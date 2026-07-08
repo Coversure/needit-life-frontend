@@ -71,8 +71,7 @@ export function Footer() {
 
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-5">
           <FooterColumn title="NeedIt Life" links={footerNavigation.cover} />
-          <FooterColumn title="NeedIt Life" links={footerNavigation.company} />
-          <FooterColumn title="Resources" links={footerNavigation.resources} />
+          {/* <FooterColumn title="Resources" links={footerNavigation.resources} /> */}
           <FooterColumn title="Support" links={footerNavigation.support} />
           <FooterColumn title="Legal" links={footerNavigation.legal} />
         </div>
