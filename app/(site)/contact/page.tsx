@@ -8,12 +8,12 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact NeedIt Life about a new Quick Life enquiry, an existing policy, a claim or a complaint.",
+    "Contact NeedIt Life about a new NeedIt Life enquiry, an existing policy, a claim or a complaint.",
 };
 
 const contacts = [
   {
-    title: "New Quick Life enquiries",
+    title: "New NeedIt Life enquiries",
     phone: siteConfig.newBusinessPhone,
     text: siteConfig.hours,
   },

@@ -31,7 +31,8 @@ export default async function AppointmentRequestedPage({
             Your appointment request has been sent
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-muted">
-            A NeedIt Life adviser will review your preferred date, time and meeting method, then contact you to confirm the appointment.
+            A NeedIt Life adviser will review your preferred date, time and
+            meeting method, then contact you to confirm the appointment.
           </p>
 
           {ref ? (
@@ -47,7 +48,8 @@ export default async function AppointmentRequestedPage({
                 Confirmation
               </h2>
               <p className="mt-2 text-sm leading-6 text-muted">
-                The requested date and time are confirmed only after the adviser contacts you.
+                The requested date and time are confirmed only after the adviser
+                contacts you.
               </p>
             </div>
 
@@ -57,7 +59,8 @@ export default async function AppointmentRequestedPage({
                 Teams appointments
               </h2>
               <p className="mt-2 text-sm leading-6 text-muted">
-                A Microsoft Teams link will be sent to the email address you provided.
+                A Microsoft Teams link will be sent to the email address you
+                provided.
               </p>
             </div>
 
@@ -66,12 +69,18 @@ export default async function AppointmentRequestedPage({
               <h2 className="mt-4 font-extrabold text-forest-950">
                 Need help?
               </h2>
-              <a
+              {/* <a
                 href={`tel:${siteConfig.newBusinessPhone.replace(/\s/g, "")}`}
                 className="mt-2 block text-sm font-extrabold text-brand-green"
               >
                 Call {siteConfig.newBusinessPhone}
-              </a>
+              </a> */}
+              <ButtonLink
+                href="/contact"
+                className="mt-4 px-6 text-md md:text-base font-semibold"
+              >
+                Contact Us
+              </ButtonLink>
             </div>
           </div>
 
