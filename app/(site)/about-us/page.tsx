@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import {
   CheckCircle2,
-  Eye,
-  HandHeart,
+  Clock,
+  MapPin,
+  MessageCircleQuestion,
   HeartPulse,
   ShieldCheck,
   Users,
@@ -20,46 +21,41 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    icon: Eye,
-    title: "Clear information",
+    icon: Clock,
+    title: "Fast, simple process",
     text: (
       <>
-        We explain{" "}
+        Apply in minutes with{" "}
         <strong className="font-extrabold text-forest-900">
-          cover amounts
-        </strong>
-        ,{" "}
-        <strong className="font-extrabold text-forest-900">
-          waiting periods
-        </strong>
-        , exclusions and important policy conditions in straightforward
-        language.
+          no medical exams
+        </strong>{" "}
+        and no lengthy underwriting.
       </>
     ),
   },
   {
-    icon: HandHeart,
-    title: "Respectful support",
+    icon: MapPin,
+    title: "Local support",
     text: (
       <>
-        Every person deserves to explore their protection options{" "}
+        A{" "}
         <strong className="font-extrabold text-forest-900">
-          without judgement
-        </strong>
-        , regardless of their health or insurance history.
+          New Zealand based team
+        </strong>{" "}
+        is on hand to help you choose the right cover.
       </>
     ),
   },
   {
-    icon: ShieldCheck,
-    title: "Accessible protection",
+    icon: MessageCircleQuestion,
+    title: "No judgement, no jargon",
     text: (
       <>
-        Our guaranteed-acceptance cover provides another path to protection{" "}
+        We explain your options in{" "}
         <strong className="font-extrabold text-forest-900">
-          without medical examinations or medical underwriting
+          plain language
         </strong>
-        .
+        , whatever your health or insurance history.
       </>
     ),
   },
@@ -70,11 +66,7 @@ const coverFeatures = [
     title: "Guaranteed acceptance",
     text: (
       <>
-        There are{" "}
-        <strong className="font-extrabold text-forest-900">
-          no medical examinations
-        </strong>{" "}
-        or medical underwriting requirements. Eligibility is confirmed through
+        No medical exams. No underwriting. Eligibility is confirmed through
         simple application questions.
       </>
     ),
@@ -87,8 +79,7 @@ const coverFeatures = [
         <strong className="font-extrabold text-forest-900">
           $50,000 up to $300,000
         </strong>{" "}
-        per insured person, subject to eligibility requirements and policy
-        limits.
+        per insured person.
       </>
     ),
   },
@@ -98,10 +89,10 @@ const coverFeatures = [
       <>
         A{" "}
         <strong className="font-extrabold text-forest-900">
-          one-off lump-sum benefit
+          one off lump sum benefit
         </strong>{" "}
-        may be paid following death or the diagnosis of a terminal illness, as
-        defined in the policy.
+        paid for any purpose: mortgage, debts, everyday costs or funeral
+        expenses.
       </>
     ),
   },
@@ -109,9 +100,10 @@ const coverFeatures = [
     title: "Lifetime protection",
     text: (
       <>
-        Cover can remain in place{" "}
-        <strong className="font-extrabold text-forest-900">for life</strong>,
-        provided premiums continue to be paid and the policy conditions are met.
+        Cover stays in place{" "}
+        <strong className="font-extrabold text-forest-900">for life</strong>{" "}
+        while premiums are paid, with an automatic 3% annual benefit increase
+        (opt out available).
       </>
     ),
   },
@@ -123,7 +115,7 @@ const customerBenefits = [
   "Guaranteed acceptance for eligible applicants",
   "Available to New Zealand residents aged 18 to 65",
   "Individual and joint policy options",
-  "New Zealand-based customer support",
+  "New Zealand based customer support",
 ];
 
 export default function AboutUsPage() {
@@ -132,11 +124,10 @@ export default function AboutUsPage() {
       <PageHero
         eyebrow="About NeedIt Life"
         title="A path to protection for more New Zealanders"
-        description="NeedIt Life offers a guaranteed-acceptance life insurance option designed to make protection simpler and more accessible, including for people who may have previously been declined because of their medical history."
+        description="Guaranteed acceptance life insurance, including for people who have previously been declined cover because of their medical history. No exams. No medical underwriting."
       />
 
-      {/* Who we are — now paired with the benefits checklist it actually
-          relates to, rather than the purpose statement above */}
+      {/* Who we are — paired with the benefits checklist */}
       <section className="section-space bg-warm-white border-b border-line">
         <Container className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
           <div className="max-w-2xl">
@@ -150,36 +141,24 @@ export default function AboutUsPage() {
 
             <div className="mt-6 space-y-5 text-base md:text-lg leading-8 text-muted">
               <p>
-                NeedIt Life helps everyday New Zealanders explore a simpler way
-                to protect themselves and their families. We provide{" "}
+                NeedIt Life gives everyday New Zealanders a simpler way to
+                protect their family:{" "}
                 <strong className="font-extrabold text-forest-900">
-                  guaranteed-acceptance life insurance
+                  guaranteed acceptance life insurance
                 </strong>{" "}
-                without medical examinations or traditional medical
-                underwriting.
+                with no medical exams and no medical underwriting.
               </p>
 
               <p>
-                Eligible customers may be able to obtain protection even if they
-                have a{" "}
+                Even if you have a{" "}
                 <strong className="font-extrabold text-forest-900">
-                  pre-existing medical condition
+                  pre existing condition
                 </strong>{" "}
                 or have{" "}
                 <strong className="font-extrabold text-forest-900">
-                  previously been declined
+                  been declined
                 </strong>{" "}
-                for another life insurance policy.
-              </p>
-
-              <p>
-                The cover can provide a{" "}
-                <strong className="font-extrabold text-forest-900">
-                  lump-sum benefit
-                </strong>{" "}
-                following death or the diagnosis of a terminal illness, as
-                defined in the policy. It may help with everyday expenses,
-                debts, funeral costs or other financial commitments.
+                elsewhere, you may still be eligible.
               </p>
             </div>
 
@@ -220,8 +199,7 @@ export default function AboutUsPage() {
         </Container>
       </section>
 
-      {/* Our purpose — now a standalone full-width statement instead of
-          sharing a grid row with the "Who we are" copy */}
+      {/* Our purpose — standalone full width statement */}
       <section className="section-space bg-white pb-0">
         <Container>
           <div className="soft-grid relative overflow-hidden rounded-[2rem] bg-forest-950 px-7 py-8 text-white shadow-xl shadow-forest-950/10 sm:px-12 sm:py-16 lg:px-20">
@@ -251,20 +229,11 @@ export default function AboutUsPage() {
               </h2>
 
               <p className="mx-auto mt-10 max-w-2xl text-base md:text-lg leading-8 text-white/75 ">
-                A{" "}
+                Health history should not be the reason someone has{" "}
                 <strong className="font-extrabold text-white">
-                  medical condition
-                </strong>{" "}
-                or{" "}
-                <strong className="font-extrabold text-white">
-                  previous insurance decision
-                </strong>{" "}
-                should not necessarily prevent someone from having any
-                protection at all. NeedIt Life offers{" "}
-                <strong className="font-extrabold text-white">
-                  guaranteed-acceptance life insurance
-                </strong>{" "}
-                designed to give more New Zealanders a path to protection.
+                  no protection at all
+                </strong>
+                . NeedIt Life exists to close that gap.
               </p>
             </div>
           </div>
@@ -283,12 +252,12 @@ export default function AboutUsPage() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-base md:text-lg leading-8 text-muted">
-              Our cover is designed as a{" "}
+              A{" "}
               <strong className="font-extrabold text-forest-900">
                 more accessible alternative
               </strong>{" "}
-              for people whose health or medical history has made obtaining
-              protection difficult.
+              for people whose health or medical history has made getting
+              covered difficult.
             </p>
           </div>
 
@@ -334,20 +303,16 @@ export default function AboutUsPage() {
               <p>
                 The policy pays a{" "}
                 <strong className="font-extrabold text-forest-900">
-                  one-off lump-sum benefit
+                  one off lump sum benefit
                 </strong>{" "}
                 if the insured person passes away or is diagnosed with a
                 terminal illness that meets the policy definition.
               </p>
 
               <p>
-                The benefit is{" "}
-                <strong className="font-extrabold text-forest-900">
-                  not restricted
-                </strong>{" "}
-                to a particular expense. It may help with mortgage or rent
-                payments, household costs, outstanding debts, funeral expenses
-                or other financial needs.
+                It is not restricted to a particular expense. It can help with
+                mortgage or rent, household costs, outstanding debts, funeral
+                expenses or other financial needs.
               </p>
 
               <p>
@@ -355,12 +320,11 @@ export default function AboutUsPage() {
                 <strong className="font-extrabold text-forest-900">
                   for life
                 </strong>{" "}
-                while the required premiums continue to be paid. The policy also
-                includes an{" "}
+                while premiums continue to be paid, with an{" "}
                 <strong className="font-extrabold text-forest-900">
                   automatic annual benefit increase of 3%
-                </strong>
-                , unless the customer chooses to opt out.
+                </strong>{" "}
+                (opt out available).
               </p>
             </div>
 
@@ -432,7 +396,7 @@ export default function AboutUsPage() {
                 <span>
                   People with{" "}
                   <strong className="font-extrabold">
-                    pre-existing medical conditions
+                    pre existing medical conditions
                   </strong>
                   , subject to applicable waiting periods, exclusions and policy
                   terms.
@@ -457,6 +421,8 @@ export default function AboutUsPage() {
         </Container>
       </section>
 
+      {/* What matters to us — now focused on why customers choose NeedIt Life
+          as the channel, rather than restating the product benefits again */}
       <section className="section-space bg-soft-sage">
         <Container>
           <div className="mx-auto mb-12 max-w-2xl text-center">
@@ -534,7 +500,7 @@ export default function AboutUsPage() {
                 Check your options
               </ButtonLink>
 
-              <ButtonLink href="/book-an-appointment" variant="primary">
+              <ButtonLink href="/book-an-appointment" variant="secondary">
                 Book an appointment
               </ButtonLink>
             </div>
