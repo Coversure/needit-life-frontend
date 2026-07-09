@@ -88,9 +88,9 @@ export default async function AppointmentRequestedPage({
             <ButtonLink href="/" variant="secondary">
               Return home
             </ButtonLink>
-            <ButtonLink href="/quick-life-insurance" arrow>
-              Learn about Quick Life
-            </ButtonLink>
+            {/* <ButtonLink href="/needit-life-insurance" arrow>
+              Learn about NeedIt Life
+            </ButtonLink> */}
           </div>
         </div>
       </Container>
