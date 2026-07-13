@@ -19,7 +19,7 @@ export function PageHero({
         <h1 className="text-balance text-4xl font-extrabold tracking-[-0.045em] text-forest-950 sm:text-5xl lg:text-6xl">
           {title}
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-8 text-muted sm:text-lg">
+        <p className="mx-auto mt-6 max-w-2xl md:max-w-3xl text-pretty text-base md:text-[20px] leading-8 text-muted">
           {description}
         </p>
       </Container>

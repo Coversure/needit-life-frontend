@@ -15,8 +15,8 @@ export const mainNavigation = [
   { label: "About Us", href: "/about-us" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "FAQs", href: "/faqs" },
-  { label: "Resources", href: "/resources" },
-  { label: "Contact", href: "/contact" },
+  // { label: "Resources", href: "/resources" },
+  // { label: "Contact", href: "/contact" },
 ];
 
 export const footerNavigation = {

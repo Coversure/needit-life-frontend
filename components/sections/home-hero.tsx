@@ -186,7 +186,7 @@ export function HomeHero() {
       </section>
 
       {/* Large desktop layout — unchanged from 1440px upward */}
-      <section className="relative hidden h-screen w-screen overflow-hidden bg-black/5 shadow-md min-[1440px]:block">
+      <section className="relative hidden h-screen overflow-hidden bg-black/5 shadow-md min-[1440px]:block">
         <div className="flex h-full w-full flex-row items-center justify-between bg-white">
           <Image
             src="/images/family-hero.png"

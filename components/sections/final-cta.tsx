@@ -24,15 +24,16 @@ export function FinalCta() {
           <div className="relative mt-8 flex flex-col gap-3 sm:flex-row lg:mt-0 lg:flex-col">
             <ButtonLink
               href="/get-a-quote"
-              className="bg-brand-lime px-8 text-forest-200 hover:bg-white"
+              variant="primary"
+              className="font-semibold"
               arrow
             >
               Start your enquiry
             </ButtonLink>
             <ButtonLink
               href="/book-an-appointment"
-              variant="primary"
-              className="bg-white px-8 text-forest-950 hover:bg-soft-sage"
+              variant="secondary"
+              className="font-semibold hover:bg-white/50 hover:text-white"
               arrow
             >
               Speak with a financial adviser

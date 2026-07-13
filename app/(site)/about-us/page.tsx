@@ -9,6 +9,7 @@ import {
   Users,
 } from "lucide-react";
 
+import Image from "next/image";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { PageHero } from "@/components/ui/page-hero";
@@ -114,7 +115,7 @@ const customerBenefits = [
   "No medical underwriting",
   "Guaranteed acceptance for eligible applicants",
   "Available to New Zealand residents aged 18 to 65",
-  "Individual and joint policy options",
+  // "Individual and joint policy options",
   "New Zealand based customer support",
 ];
 
@@ -139,14 +140,22 @@ export default function AboutUsPage() {
               Straightforward life cover for real life
             </h2>
 
-            <div className="mt-6 space-y-5 text-base md:text-lg leading-8 text-muted">
+            <div className="mt-6 space-y-5 text-base md:text-[20px] leading-8 text-muted">
               <p>
                 NeedIt Life gives everyday New Zealanders a simpler way to
                 protect their family:{" "}
                 <strong className="font-extrabold text-forest-900">
                   guaranteed acceptance life insurance
                 </strong>{" "}
-                with no medical exams and no medical underwriting.
+                with{" "}
+                <strong className="font-extrabold text-forest-900">
+                  no medical exams
+                </strong>{" "}
+                and{" "}
+                <strong className="font-extrabold text-forest-900">
+                  no medical underwriting
+                </strong>
+                .
               </p>
 
               <p>
@@ -165,14 +174,14 @@ export default function AboutUsPage() {
             <ButtonLink
               href="/get-a-quote"
               variant="primary"
-              className="mt-8 font-semibold"
+              className="mt-8 font-semibold lg:text-[20px]"
               arrow
             >
               Explore your cover options
             </ButtonLink>
           </div>
 
-          <aside className="rounded-[2rem] border border-line bg-soft-sage p-7 shadow-sm sm:p-8">
+          {/* <aside className="rounded-[2rem] border border-line bg-soft-sage p-7 shadow-sm sm:p-8">
             <p className="text-sm md:text-base font-extrabold uppercase tracking-[0.16em] text-brand-green">
               At a glance
             </p>
@@ -195,6 +204,16 @@ export default function AboutUsPage() {
                 </li>
               ))}
             </ul>
+          </aside> */}
+
+          <aside className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-line shadow-md lg:aspect-auto lg:h-full">
+            <Image
+              src="/images/elderly-family.png"
+              alt="A New Zealand family protected by NeedIt Life"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 40vw, 100vw"
+            />
           </aside>
         </Container>
       </section>
@@ -228,7 +247,7 @@ export default function AboutUsPage() {
                 available
               </h2>
 
-              <p className="mx-auto mt-10 max-w-2xl text-base md:text-lg leading-8 text-white/75 ">
+              <p className="mx-auto mt-10 max-w-2xl text-base md:text-[20px] leading-8 text-white/75 ">
                 Health history should not be the reason someone has{" "}
                 <strong className="font-extrabold text-white">
                   no protection at all
@@ -251,14 +270,14 @@ export default function AboutUsPage() {
               Life insurance should not feel out of reach
             </h2>
 
-            <p className="mx-auto mt-5 max-w-2xl text-base md:text-lg leading-8 text-muted">
+            {/* <p className="mx-auto mt-5 max-w-2xl text-base md:text-[20px] leading-8 text-muted">
               A{" "}
               <strong className="font-extrabold text-forest-900">
                 more accessible alternative
               </strong>{" "}
               for people whose health or medical history has made getting
               covered difficult.
-            </p>
+            </p> */}
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
@@ -268,16 +287,16 @@ export default function AboutUsPage() {
                 className="group h-full rounded-[1.75rem] border border-line bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8"
               >
                 <div className="flex items-start gap-4 sm:gap-5">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-green-100 text-base font-extrabold text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-soft-sage text-base font-extrabold text-brand-green transition duration-300 group-hover:bg-brand-green group-hover:text-white">
                     {index + 1}
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-extrabold leading-snug text-forest-950">
+                    <h3 className="text-xl font-extrabold leading-snug text-brand-green">
                       {title}
                     </h3>
 
-                    <p className="mt-5 text-base md:text-[17px] leading-7 text-muted sm:text-base">
+                    <p className="mt-5 text-base md:text-[18px] leading-7 text-muted sm:text-base">
                       {text}
                     </p>
                   </div>
@@ -288,6 +307,7 @@ export default function AboutUsPage() {
         </Container>
       </section>
 
+      {/* How the cover helps */}
       <section className="section-space bg-white">
         <Container className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16">
           <div className="max-w-2xl">
@@ -299,7 +319,7 @@ export default function AboutUsPage() {
               Financial support when it matters most
             </h2>
 
-            <div className="mt-6 space-y-5 text-base md:text-lg leading-8 text-muted ">
+            <div className="mt-6 space-y-5 text-base md:text-[19px] leading-8 text-muted ">
               <p>
                 The policy pays a{" "}
                 <strong className="font-extrabold text-forest-900">
@@ -334,7 +354,7 @@ export default function AboutUsPage() {
               className="mt-8 font-semibold"
               arrow
             >
-              Get a life insurance quote
+              Get a NeedIt Life quote
             </ButtonLink>
           </div>
 
@@ -379,21 +399,6 @@ export default function AboutUsPage() {
                 />
 
                 <span>
-                  Applicants seeking an{" "}
-                  <strong className="font-extrabold">
-                    individual or joint policy
-                  </strong>
-                  .
-                </span>
-              </li>
-
-              <li className="flex gap-3 rounded-2xl bg-white p-4 text-sm md:text-base font-bold leading-7 text-forest-900 shadow-sm">
-                <CheckCircle2
-                  className="mt-1 h-5 w-5 shrink-0 text-brand-green"
-                  aria-hidden="true"
-                />
-
-                <span>
                   People with{" "}
                   <strong className="font-extrabold">
                     pre existing medical conditions
@@ -423,7 +428,7 @@ export default function AboutUsPage() {
 
       {/* What matters to us — now focused on why customers choose NeedIt Life
           as the channel, rather than restating the product benefits again */}
-      <section className="section-space bg-soft-sage">
+      {/* <section className="section-space bg-soft-sage">
         <Container>
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <p className="text-sm md:text-base font-extrabold uppercase tracking-[0.18em] text-brand-green">
@@ -467,7 +472,7 @@ export default function AboutUsPage() {
             ))}
           </div>
         </Container>
-      </section>
+      </section> */}
 
       <section className="section-space bg-white">
         <Container className="relative overflow-hidden rounded-[2rem] bg-forest-950 px-7 py-12 text-center text-white shadow-xl shadow-forest-950/10 sm:px-12 sm:py-16">
@@ -496,16 +501,20 @@ export default function AboutUsPage() {
             </p>
 
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-              <ButtonLink href="/get-a-quote" variant="primary" arrow>
+              {/* <ButtonLink href="/get-a-quote" variant="primary" arrow>
                 Check your options
-              </ButtonLink>
+              </ButtonLink> */}
 
-              <ButtonLink href="/book-an-appointment" variant="secondary">
-                Book an appointment
+              <ButtonLink
+                href="/book-an-appointment"
+                variant="secondary"
+                className="text-base font-semibold hover:text-brand-green hover:shadow-md hover:shadow-soft-sage/30"
+              >
+                Speak to a NeedIt Life advisor
               </ButtonLink>
             </div>
 
-            <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
+            <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
               <p className="text-sm leading-6 text-white/60">
                 Eligibility requirements, premiums, waiting periods, exclusions
                 and policy terms apply.{" "}

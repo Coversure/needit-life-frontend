@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
+import { CalendarDays, Mail, Phone } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { footerNavigation, siteConfig } from "@/lib/site";
+import { ButtonLink } from "../ui/button";
 
 function FooterColumn({
   title,
@@ -52,20 +53,21 @@ export function Footer() {
           <p className="mt-6 max-w-md text-sm md:text-lg leading-7 text-white/70">
             Local support. Real people. Real cover.
           </p>
-          <div className="mt-7 space-y-3 text-sm font-semibold text-white/80">
-            <a
-              className="flex items-center gap-3 hover:text-white"
-              href={`tel:${siteConfig.newBusinessPhone.replace(/\s/g, "")}`}
+          <div className="mt-7 flex flex-col gap-3 w-fit">
+            <ButtonLink
+              href="/book-an-appointment"
+              className="px-6 text-md md:text-base font-semibold hover:bg-soft-sage hover:text-forest-950"
             >
-              <Phone className="h-4 w-4 text-brand-lime" />{" "}
-              {siteConfig.newBusinessPhone}
-            </a>
-            <a
-              className="flex items-center gap-3 hover:text-white"
-              href={`mailto:${siteConfig.email}`}
+              <CalendarDays className="h-4 w-4" aria-hidden="true" />
+              Book an Appointment
+            </ButtonLink>
+            <ButtonLink
+              href="/get-a-quote"
+              variant="secondary"
+              className="px-6 text-md md:text-base font-semibold"
             >
-              <Mail className="h-4 w-4 text-brand-lime" /> {siteConfig.email}
-            </a>
+              Get a Quote
+            </ButtonLink>
           </div>
         </div>
 
