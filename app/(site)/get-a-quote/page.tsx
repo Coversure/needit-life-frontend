@@ -41,7 +41,7 @@ export default function GetAQuotePage() {
               </li>
             ))}
           </ul>
-          <div className="mt-8 rounded-2xl border border-line bg-white p-5">
+          {/* <div className="mt-8 rounded-2xl border border-line bg-white p-5">
             <p className="flex items-center gap-2 text-sm font-extrabold text-forest-950">
               <Phone className="h-4 w-4 text-brand-green" /> Prefer to speak
               with someone?
@@ -55,7 +55,7 @@ export default function GetAQuotePage() {
             <p className="mt-1 text-xs font-semibold text-muted">
               {siteConfig.hours}
             </p>
-          </div>
+          </div> */}
           <p className="mt-5 flex gap-2 text-xs leading-5 text-muted">
             <LockKeyhole className="h-4 w-4 shrink-0 text-brand-green" />
             Your data is protected and will only be used to respond to your
