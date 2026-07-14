@@ -61,20 +61,21 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 xl:flex">
-          <Link
+        <div className="hidden items-center gap-3 lg:flex">
+          <ButtonLink
             href="/book-an-appointment"
-            className="inline-flex min-h-12 items-center gap-2 rounded-2xl border border-line px-4 text-sm md:text-base font-bold text-forest-900 transition hover:border-brand-green hover:bg-brand-sage"
+            className="px-6 text-md md:text-base font-semibold"
+            // className="inline-flex min-h-12 items-center gap-2 rounded-2xl border border-line px-4 text-sm md:text-base font-bold text-forest-900 transition hover:border-brand-green hover:bg-brand-sage"
           >
             <CalendarDays className="h-4 w-4" aria-hidden="true" />
             Book an Appointment
-          </Link>
-          <ButtonLink
+          </ButtonLink>
+          {/* <ButtonLink
             href="/get-a-quote"
             className="px-6 text-md md:text-base font-semibold"
           >
             Get a Quote
-          </ButtonLink>
+          </ButtonLink> */}
         </div>
 
         <button

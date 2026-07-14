@@ -135,7 +135,7 @@ function ResponsiveHeroContent() {
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <ButtonLink
-            href="/get-a-quote"
+            href="/book-an-appointment"
             className="text-md min-w-48 font-semibold md:text-lg"
             arrow
           >
@@ -225,7 +225,7 @@ export function HomeHero() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <ButtonLink
-                  href="/get-a-quote"
+                  href="/book-an-appointment"
                   className="text-md min-w-48 font-semibold md:text-lg"
                   arrow
                 >
