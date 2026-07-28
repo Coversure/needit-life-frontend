@@ -15,8 +15,6 @@ export const mainNavigation = [
   { label: "About Us", href: "/about-us" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "FAQs", href: "/faqs" },
-  // { label: "Resources", href: "/resources" },
-  // { label: "Contact", href: "/contact" },
 ];
 
 export const footerNavigation = {
@@ -31,8 +29,6 @@ export const footerNavigation = {
     { label: "Documents & Forms", href: "/resources/documents-and-forms" },
   ],
   support: [
-    // { label: "Existing Customers", href: "/existing-customers" },
-    // { label: "Claims", href: "/claims" },
     { label: "Contact", href: "/contact" },
     { label: "Book an Appointment", href: "/book-an-appointment" },
     { label: "Complaints", href: "/complaints" },
@@ -41,7 +37,7 @@ export const footerNavigation = {
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms & Conditions", href: "/terms-and-conditions" },
     {
-      label: "Financial Advice Disclosure",
+      label: "Disclosure Statement",
       href: "/financial-advice-disclosure",
     },
   ],

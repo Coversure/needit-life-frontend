@@ -1,7 +1,5 @@
-import { Phone } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { siteConfig } from "@/lib/site";
 
 export function FinalCta() {
   return (

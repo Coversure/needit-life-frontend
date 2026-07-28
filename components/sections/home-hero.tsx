@@ -109,14 +109,6 @@ function ResponsiveHeroContent() {
   return (
     <div className="relative z-10 bg-white px-5 py-9 sm:px-8 sm:py-11 md:px-10 md:py-12 lg:flex lg:min-h-[680px] lg:w-[52%] lg:flex-col lg:justify-center lg:bg-transparent lg:bg-[linear-gradient(to_right,#fff_0%,#fff_82%,rgba(255,255,255,0.96)_87%,rgba(255,255,255,0.78)_91%,rgba(255,255,255,0.5)_95%,rgba(255,255,255,0.2)_98%,transparent_100%)] lg:px-8 lg:py-10 min-[1200px]:min-h-[740px] min-[1200px]:w-[50%] min-[1200px]:px-10">
       <div className="w-full">
-        <div className="mb-3 flex items-center gap-3 md:gap-4">
-          <span className="h-0.5 w-9 shrink-0 rounded-full bg-brand-green md:w-11" />
-
-          <p className="text-sm font-bold text-forest-900 md:text-base">
-            Life cover when others say no.
-          </p>
-        </div>
-
         <h1 className="text-balance text-[2.75rem] font-bold leading-[0.98] tracking-[-0.055em] text-forest-950 min-[420px]:text-5xl md:text-6xl lg:text-[3.25rem] min-[1200px]:text-[3.65rem]">
           Life cover <br />
           when others <br />
@@ -151,7 +143,7 @@ function ResponsiveHeroContent() {
           </ButtonLink>
         </div>
 
-        <TrustpilotRating responsive />
+        {/* <TrustpilotRating responsive /> */}
       </div>
     </div>
   );
@@ -199,14 +191,6 @@ export function HomeHero() {
 
           <div className="z-10 flex h-full w-[40%] flex-col items-center gap-4 bg-linear-to-r from-white via-white to-white/60">
             <div className="w-full py-10 pr-2 pl-20">
-              <div className="mb-3 flex items-center gap-4">
-                <span className="h-0.5 w-11 rounded-full bg-brand-green" />
-
-                <p className="text-sm font-bold text-forest-900 md:text-[17px]">
-                  Life cover when others say no.
-                </p>
-              </div>
-
               <h1 className="text-balance text-5xl leading-[0.98] font-bold tracking-[-0.055em] text-forest-950 sm:text-6xl lg:text-[4.4rem]">
                 Life cover <br />
                 when others <br />
@@ -241,7 +225,7 @@ export function HomeHero() {
                 </ButtonLink>
               </div>
 
-              <TrustpilotRating />
+              {/* <TrustpilotRating /> */}
             </div>
           </div>
 

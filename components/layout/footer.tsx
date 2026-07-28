@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, Mail, Phone } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { footerNavigation, siteConfig } from "@/lib/site";
+import { footerNavigation } from "@/lib/site";
 import { ButtonLink } from "../ui/button";
 
 function FooterColumn({
@@ -47,7 +47,7 @@ export function Footer() {
           />
           <div>
             <p className="mt-6 max-w-md text-sm md:text-lg leading-7 text-white/70">
-              Proudly New Zealand
+              Proudly New Zealand Owned & Operated
             </p>
           </div>
           <p className="mt-6 max-w-md text-sm md:text-lg leading-7 text-white/70">
@@ -61,19 +61,11 @@ export function Footer() {
               <CalendarDays className="h-4 w-4" aria-hidden="true" />
               Book an Appointment
             </ButtonLink>
-            <ButtonLink
-              href="/get-a-quote"
-              variant="secondary"
-              className="px-6 text-md md:text-base font-semibold"
-            >
-              Get a Quote
-            </ButtonLink>
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-5">
           <FooterColumn title="NeedIt Life" links={footerNavigation.cover} />
-          {/* <FooterColumn title="Resources" links={footerNavigation.resources} /> */}
           <FooterColumn title="Support" links={footerNavigation.support} />
           <FooterColumn title="Legal" links={footerNavigation.legal} />
         </div>
@@ -83,10 +75,81 @@ export function Footer() {
         <Container className="flex flex-col gap-4 py-6 text-xs leading-6 text-white/55 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} NeedIt Life. All rights reserved.</p>
           <p className="max-w-3xl md:text-right">
-            Prototype content for review. Product eligibility, exclusions,
-            waiting periods and benefits are subject to the approved policy
-            wording. NeedIt Life branding and legal entity details must be
-            confirmed before launch.
+            Need It Life insurance products are underwritten and issued by{" "}
+            <span>
+              <a
+                href="https://momentumlife.co.nz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-white/80 transition hover:text-white"
+              >
+                Momentum Life Limited
+              </a>
+            </span>{" "}
+            (NZBN 9429041981658, FSP472286) and promoted and distributed by{" "}
+            <span>
+              <a
+                href="https://coversure.co.nz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-white/80 transition hover:text-white"
+              >
+                Coversure Financial Services Limited
+              </a>
+            </span>{" "}
+            (NZBN 9429047688780, FSP722232). ~ The information on this website
+            is intended as general information only and does not take into
+            account your personal objectives, financial situation, or needs. It
+            is not personalised financial advice. ~ Before purchasing any
+            insurance product, please read the relevant{" "}
+            <span>
+              <a
+                href="/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-white/80 transition hover:text-white"
+              >
+                Policy Document
+              </a>
+            </span>{" "}
+            , including the terms, conditions, exclusions, limitations, and
+            premiums, to determine whether the cover is right for you. ~ If you
+            would like personalised financial advice, you can request this
+            through our website. With your consent, your details may be referred
+            to a licensed Financial Adviser at Coversure. ~ Pease refer to our{" "}
+            <span>
+              <a
+                href="/financial-advice-disclosure"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-white/80 transition hover:text-white"
+              >
+                Disclosure Statement
+              </a>
+            </span>{" "}
+            ,{" "}
+            <span>
+              <a
+                href="/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-white/80 transition hover:text-white"
+              >
+                Privacy Policy
+              </a>
+            </span>{" "}
+            , and{" "}
+            <span>
+              <a
+                href="/terms-and-conditions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-white/80 transition hover:text-white"
+              >
+                Terms of Use
+              </a>
+            </span>{" "}
+            for further information.
           </p>
         </Container>
       </div>
