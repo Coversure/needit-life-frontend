@@ -591,7 +591,7 @@ export default function PrivacyPolicyPage() {
 
       <section className="section-space bg-warm-white">
         <Container className="max-w-5xl">
-          <div className="rounded-[2rem] border border-line bg-white p-7 shadow-sm sm:p-10">
+          <div className="rounded-3xl border border-line bg-white p-7 shadow-sm sm:p-10">
             <div className="space-y-12">
               {sections.map((section) => (
                 <section key={section.title}>

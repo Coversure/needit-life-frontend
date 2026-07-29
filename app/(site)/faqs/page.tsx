@@ -1,71 +1,107 @@
 import type { Metadata } from "next";
-import { FaqList } from "@/components/ui/faq-list";
-import { Container } from "@/components/ui/container";
-import { PageHero } from "@/components/ui/page-hero";
+
 import { FinalCta } from "@/components/sections/final-cta";
+import { Container } from "@/components/ui/container";
+import { FaqList } from "@/components/ui/faq-list";
+import { PageHero } from "@/components/ui/page-hero";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
-    "Answers to common questions about NeedIt Life eligibility, waiting periods, premiums, claims and applications.",
+    "Answers to common questions about Quick Life, including eligibility, guaranteed acceptance, cover amounts, premiums, waiting periods and exclusions.",
 };
 
 const faqs = [
   {
-    category: "Eligibility",
-    question: "Who can apply for NeedIt Life?",
+    category: "About Quick Life",
+    question: "What is Quick Life?",
     answer:
-      "The approved product rules set the age, residency and other eligibility requirements. This prototype assumes the product is intended for eligible New Zealand residents, but the exact limits must be confirmed against current documents.",
+      "Quick Life is an easy-acceptance life insurance product designed to make protecting your loved ones simple and affordable. Quick Life is underwritten and issued by Momentum Life Limited (NZBN 9429041981658, FSP472286) and is promoted and distributed by Coversure Financial Services Limited (NZBN 9429047688780, FSP722232) under the NeedIt Life brand.",
   },
   {
-    category: "Eligibility",
-    question: "Can I apply with a pre-existing condition?",
+    category: "About Quick Life",
+    question: "What is NeedIt Life?",
     answer:
-      "You may still be able to apply. A waiting period or exclusion can apply to claims connected with a condition that existed before cover began.",
-  },
-  {
-    category: "Applications",
-    question: "What if I have previously been declined?",
-    answer:
-      "A previous decline does not necessarily prevent you from enquiring. NeedIt Life uses a different acceptance approach from fully underwritten life insurance.",
-  },
-  {
-    category: "Applications",
-    question: "Will I need a medical examination?",
-    answer:
-      "The current NeedIt Life positioning describes a simplified application without traditional medical underwriting. The final wording should be checked against the current application process.",
+      "NeedIt Life is a brand of Coversure Financial Services Limited, created to make purchasing life insurance quick, simple and accessible online for everyday New Zealanders.",
   },
   {
     category: "Cover",
-    question: "How much cover is available?",
+    question: "How does Quick Life work?",
     answer:
-      "Current marketing information describes individual cover options from $50,000 up to $300,000. Joint-cover limits and availability should be confirmed in the approved product material.",
+      "Quick Life pays a one-off lump sum if the life insured passes away or is diagnosed with a terminal illness, as defined in the Policy Wording. Your family can use the payment in whatever way they need, including covering everyday living expenses, paying off debt, meeting funeral costs or helping maintain financial security during a difficult time.",
+  },
+  {
+    category: "Eligibility",
+    question: "Who can apply?",
+    answer:
+      "You may be eligible to apply if you are a New Zealand resident, are aged between 18 and 65 years, and have not been diagnosed with a terminal illness or been receiving palliative or hospice care when you apply.",
+  },
+  {
+    category: "Eligibility",
+    question: "Is acceptance guaranteed?",
+    answer:
+      "Yes. Quick Life offers guaranteed acceptance for eligible applicants. There are no medical examinations or medical underwriting required. Your eligibility is confirmed through a simple application process.",
   },
   {
     category: "Cover",
-    question: "What does terminal illness cover mean?",
+    question: "How much cover can I get?",
     answer:
-      "A terminal illness benefit may be payable when the insured person meets the policy definition and all claim requirements. The precise medical definition is in the policy wording.",
+      "You can choose cover from $50,000 up to $300,000 for each life insured. Joint policies are available with up to $500,000 in total cover.",
   },
   {
-    category: "Waiting periods",
-    question: "How does the pre-existing condition period work?",
+    category: "Cover",
+    question: "Can I insure my partner?",
     answer:
-      "Claims connected with a condition that existed before the policy started may be excluded during an initial period. Accidental death can be treated differently, depending on the policy.",
+      "Yes. Quick Life is available as either an individual policy or a joint policy for eligible applicants.",
+  },
+  {
+    category: "Cover",
+    question: "Does my cover increase over time?",
+    answer:
+      "Yes. Your cover automatically increases by 3% each year to help keep pace with inflation. You can choose to opt out of these annual increases.",
+  },
+  {
+    category: "Cover",
+    question: "How long does my cover last?",
+    answer:
+      "Quick Life provides lifetime cover, provided your premiums continue to be paid and your policy remains in force. From age 75, your policy also includes a complimentary $20,000 Lifetime Benefit. Premiums increase with age until age 75 and then remain level thereafter.",
   },
   {
     category: "Premiums",
-    question: "How is my premium calculated?",
+    question: "How are my premiums calculated?",
     answer:
-      "Premiums can depend on factors such as age, cover amount and product pricing. The team should provide the actual premium and explain how it may change over time.",
+      "Your premium depends on your age, gender, smoking status and the amount of cover you choose.",
   },
   {
-    category: "Claims",
-    question: "How do I make a claim?",
+    category: "Premiums",
+    question: "How can I pay my premiums?",
     answer:
-      "Contact the claims team as soon as practical. They can explain the forms, evidence and next steps. The Claims page contains the current contact details.",
+      "You can pay your premiums fortnightly, monthly or annually. Payments can be made by Direct Debit or Credit Card.",
   },
-  // { category: "Existing policy", question: "Does the NeedIt Life rebrand change my existing policy?", answer: "The rebrand should not be described as changing contractual rights unless the legal documents say so. Existing customers should receive a formal explanation of the brand and legal entity relationship." },
+  {
+    category: "Waiting periods",
+    question: "Are there any waiting periods?",
+    answer:
+      "Yes. A two-year waiting period applies to claims arising from suicide or intentional self-inflicted injury and pre-existing conditions. Please refer to the Policy Wording for the complete terms and details.",
+  },
+  {
+    category: "Exclusions",
+    question: "What isn’t covered?",
+    answer:
+      "Quick Life does not provide cover for claims resulting from suicide or intentional self-inflicted injury during the first two years, pre-existing conditions during the first two years, war or acts of terrorism, criminal activity, or drug or alcohol misuse unless medication has been prescribed and taken as directed. Please refer to the Policy Wording for the complete terms, conditions, exclusions and definitions.",
+  },
+  {
+    category: "Financial advice",
+    question: "Is this personalised financial advice?",
+    answer:
+      "No. The information provided on this website is general in nature and does not constitute personalised financial advice. It has been prepared without considering your individual objectives, financial situation or insurance needs. If you would like personalised financial advice before deciding whether Quick Life is right for you, you can request a referral to a Financial Adviser at Coversure Financial Services Limited.",
+  },
+  {
+    category: "Policy documents",
+    question: "Where can I read the Policy Wording?",
+    answer:
+      "The Quick Life Policy Wording contains the full benefits, terms, conditions, exclusions, waiting periods and definitions that apply to the policy. We recommend reading the Policy Wording carefully before applying so you understand what is and isn’t covered.",
+  },
 ];
 
 export default function FaqPage() {
@@ -74,13 +110,15 @@ export default function FaqPage() {
       <PageHero
         eyebrow="Frequently asked questions"
         title="The details people ask about most"
-        description="Search NeedIt Life questions by topic and review the formal policy documents before making a decision."
+        description="Find answers to common questions about Quick Life, including eligibility, cover, premiums, waiting periods and exclusions."
       />
-      <section className="section-space bg-soft-sage">
+
+      <section className="section-space bg-warm-white">
         <Container>
           <FaqList faqs={faqs} />
         </Container>
       </section>
+
       <FinalCta />
     </>
   );
