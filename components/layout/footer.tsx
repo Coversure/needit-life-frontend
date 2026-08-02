@@ -72,9 +72,8 @@ export function Footer() {
       </Container>
 
       <div className="border-t border-white/10">
-        <Container className="flex flex-col gap-4 py-8 text-xs leading-6 text-white/55 md:flex-row md:items-end md:justify-between">
-          <p>© {new Date().getFullYear()} NeedIt Life. All rights reserved.</p>
-          <p className="max-w-4xl md:text-left">
+        <Container className="flex flex-col gap-4 py-8 text-xs leading-6 text-white/55">
+          <p className="max-w-8xl md:text-left">
             Need It Life insurance products are underwritten and issued by{" "}
             <span>
               <a
@@ -150,6 +149,9 @@ export function Footer() {
               </a>
             </span>{" "}
             for further information.
+          </p>
+          <p className="font-bold text-white/80 pt-5">
+            © {new Date().getFullYear()} NeedIt Life. All rights reserved.
           </p>
         </Container>
       </div>
