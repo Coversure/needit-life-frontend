@@ -110,12 +110,12 @@ export function HomeHero() {
       <section className="relative hidden h-screen overflow-hidden bg-black/5 shadow-md min-[1440px]:block">
         <div className="flex h-full w-full flex-row items-center justify-between bg-white">
           <Image
-            src="/images/hero-upgraded-cropped.png"
+            src="/images/family-hero-upgraded-2.png"
             alt="A family spending time together near the New Zealand coast"
             priority
             fill
             sizes="55vw"
-            className="origin-right scale-[0.999] object-cover object-right"
+            className="origin-right scale-[1] object-cover object-right"
           />
 
           <div className="z-10 flex h-full w-[40%] flex-col items-center gap-4 bg-linear-to-r from-white via-white to-white/60">
