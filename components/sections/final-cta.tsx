@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/container";
 
 export function FinalCta() {
   return (
-    <section className="bg-soft-sage py-16 sm:py-20">
+    <section className="bg-soft-sage py-16 sm:py-19">
       <Container>
         <div className="relative overflow-hidden rounded-[2.25rem] bg-forest-900 px-7 py-12 text-white sm:px-12 lg:flex lg:items-center lg:justify-between lg:gap-12 lg:px-16">
           {/* <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full border-[42px] border-brand-lime/15" /> */}
