@@ -21,12 +21,13 @@ export function FinalCta() {
           </div>
           <div className="relative mt-8 flex flex-col gap-3 sm:flex-row lg:mt-0 lg:flex-col">
             <ButtonLink
-              href="/get-a-quote"
+              href="https://needitlife.mll.net.nz/life-insurance/"
+              target="_blank"
               variant="primary"
               className="font-semibold"
               arrow
             >
-              Start your enquiry
+              Get a quote
             </ButtonLink>
             <ButtonLink
               href="/book-an-appointment"

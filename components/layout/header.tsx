@@ -63,19 +63,19 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <ButtonLink
+            href="https://needitlife.mll.net.nz/life-insurance/"
+            target="_blank"
+            className="px-6 text-md md:text-base font-semibold"
+          >
+            Get a Quote
+          </ButtonLink>
+          <ButtonLink
             href="/book-an-appointment"
             className="px-6 text-md md:text-base font-semibold"
-            // className="inline-flex min-h-12 items-center gap-2 rounded-2xl border border-line px-4 text-sm md:text-base font-bold text-forest-900 transition hover:border-brand-green hover:bg-brand-sage"
           >
             <CalendarDays className="h-4 w-4" aria-hidden="true" />
             Book an Appointment
           </ButtonLink>
-          {/* <ButtonLink
-            href="/get-a-quote"
-            className="px-6 text-md md:text-base font-semibold"
-          >
-            Get a Quote
-          </ButtonLink> */}
         </div>
 
         <button
@@ -113,7 +113,12 @@ export function Header() {
                 <CalendarDays className="h-4 w-4" aria-hidden="true" />
                 Book an Appointment
               </Link>
-              <ButtonLink href="/get-a-quote" className="w-full" arrow>
+              <ButtonLink
+                href="https://needitlife.mll.net.nz/life-insurance/"
+                target="_blank"
+                className="w-full"
+                arrow
+              >
                 Get a Quote
               </ButtonLink>
             </div>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Calendar, Star, Heart, Leaf, CircleDollarSign } from "lucide-react";
+import { Calendar, Heart, Leaf, CircleDollarSign } from "lucide-react";
 import { NewZealandIcon } from "@/components/ui/Icons";
 import { SimpleApplicationIcon } from "@/components/ui/Icons";
 import { ButtonLink } from "@/components/ui/button";
@@ -14,73 +14,6 @@ const panelItems = [
   { icon: SimpleApplicationIcon, label: "Simple application" },
   { icon: Heart, label: "No judgement. Real cover." },
 ];
-
-function TrustpilotRating({ responsive = false }: { responsive?: boolean }) {
-  return (
-    <div
-      className={
-        responsive
-          ? "mt-12 flex flex-wrap items-center gap-x-3 gap-y-2"
-          : "mt-10 flex flex-wrap items-center gap-x-4 gap-y-2"
-      }
-      aria-label="Rated 4.8 out of 5 on Trustpilot"
-    >
-      <span
-        className={
-          responsive
-            ? "text-sm font-semibold text-forest-950"
-            : "text-[15px] font-semibold text-forest-950"
-        }
-      >
-        Rated 4.8 out of 5
-      </span>
-
-      <div className="flex gap-1">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <span
-            key={index}
-            className={
-              responsive
-                ? "flex size-6 items-center justify-center rounded bg-brand-green"
-                : "flex size-7 items-center justify-center rounded bg-brand-green"
-            }
-          >
-            <Star
-              className={
-                responsive
-                  ? "size-4 fill-white text-white"
-                  : "size-[18px] fill-white text-white"
-              }
-              strokeWidth={1.5}
-              aria-hidden="true"
-            />
-          </span>
-        ))}
-      </div>
-
-      <div className="flex items-center gap-1">
-        <Star
-          className={
-            responsive
-              ? "size-5 fill-brand-green text-brand-green"
-              : "size-6 fill-brand-green text-brand-green"
-          }
-          aria-hidden="true"
-        />
-
-        <span
-          className={
-            responsive
-              ? "text-base font-semibold text-forest-950"
-              : "text-[18px] font-semibold text-forest-950"
-          }
-        >
-          Trustpilot
-        </span>
-      </div>
-    </div>
-  );
-}
 
 function VerticalBenefitsPanel({ className = "" }: { className?: string }) {
   return (
@@ -127,7 +60,8 @@ function ResponsiveHeroContent() {
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <ButtonLink
-            href="/book-an-appointment"
+            href="https://needitlife.mll.net.nz/life-insurance/"
+            target="_blank"
             className="text-md min-w-48 font-semibold md:text-lg"
             arrow
           >
@@ -142,8 +76,6 @@ function ResponsiveHeroContent() {
             How It Works
           </ButtonLink>
         </div>
-
-        {/* <TrustpilotRating responsive /> */}
       </div>
     </div>
   );
@@ -172,9 +104,6 @@ export function HomeHero() {
           {/* Compact desktop overlay */}
           <div className="absolute inset-0 hidden bg-[linear-gradient(to_right,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0.55)_12%,rgba(255,255,255,0.12)_25%,transparent_45%)] lg:block" />
         </div>
-
-        {/* Compact desktop benefits */}
-        {/* <VerticalBenefitsPanel className="absolute right-4 top-1/2 z-20 hidden w-[180px] -translate-y-1/2 lg:block min-[1200px]:right-6 min-[1200px]:w-[200px]" /> */}
       </section>
 
       {/* Large desktop layout — unchanged from 1440px upward */}
@@ -209,7 +138,8 @@ export function HomeHero() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <ButtonLink
-                  href="/book-an-appointment"
+                  href="https://needitlife.mll.net.nz/life-insurance/"
+                  target="_blank"
                   className="text-md min-w-48 font-semibold md:text-lg"
                   arrow
                 >
@@ -224,8 +154,6 @@ export function HomeHero() {
                   How It Works
                 </ButtonLink>
               </div>
-
-              {/* <TrustpilotRating /> */}
             </div>
           </div>
 

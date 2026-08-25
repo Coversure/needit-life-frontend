@@ -34,6 +34,8 @@ export const footerNavigation = {
     { label: "Complaints", href: "/complaints" },
   ],
   legal: [
+    { label: "Policy Documents", href: "/policy-document" },
+
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms & Conditions", href: "/terms-and-conditions" },
     {

@@ -1,14 +1,21 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ChevronDown, Search } from "lucide-react";
 
+import { ButtonLink } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 type Faq = {
+  id?: string;
   category: string;
   question: string;
   answer: string;
+  action?: {
+    label: string;
+    href: string;
+    target?: "_blank" | "_self";
+  };
 };
 
 export function FaqList({ faqs }: { faqs: Faq[] }) {
@@ -21,17 +28,53 @@ export function FaqList({ faqs }: { faqs: Faq[] }) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState<string | null>(faqs[0]?.question ?? null);
 
+  useEffect(() => {
+    const openFaqFromHash = () => {
+      const hash = window.location.hash.replace("#", "");
+
+      if (!hash) return;
+
+      const faq = faqs.find((item) => item.id === hash);
+
+      if (!faq) return;
+
+      setCategory("All");
+      setQuery("");
+      setOpen(faq.question);
+
+      requestAnimationFrame(() => {
+        document.getElementById(hash)?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    };
+
+    openFaqFromHash();
+
+    window.addEventListener("hashchange", openFaqFromHash);
+
+    return () => {
+      window.removeEventListener("hashchange", openFaqFromHash);
+    };
+  }, [faqs]);
+
   const filtered = useMemo(() => {
     const normalizedQuery = query.toLowerCase().trim();
 
     return faqs.filter((faq) => {
       const matchesCategory = category === "All" || faq.category === category;
 
+      const searchableText = `
+        ${faq.question}
+        ${faq.answer}
+        ${faq.category}
+        ${faq.action?.label ?? ""}
+      `;
+
       const matchesQuery =
         !normalizedQuery ||
-        `${faq.question} ${faq.answer} ${faq.category}`
-          .toLowerCase()
-          .includes(normalizedQuery);
+        searchableText.toLowerCase().includes(normalizedQuery);
 
       return matchesCategory && matchesQuery;
     });
@@ -94,8 +137,9 @@ export function FaqList({ faqs }: { faqs: Faq[] }) {
             return (
               <article
                 key={faq.question}
+                id={faq.id}
                 className={cn(
-                  "overflow-hidden rounded-[1.5rem] border bg-white shadow-sm transition sm:rounded-[1.75rem]",
+                  "scroll-mt-28 overflow-hidden rounded-[1.5rem] border bg-white shadow-sm transition sm:rounded-[1.75rem]",
                   active
                     ? "border-brand-green/40 shadow-md"
                     : "border-line hover:border-brand-green/25 hover:shadow-md",
@@ -148,6 +192,19 @@ export function FaqList({ faqs }: { faqs: Faq[] }) {
                       <p className="max-w-4xl text-base leading-8 text-muted sm:text-lg sm:leading-9 lg:text-[1.2rem] lg:leading-9">
                         {faq.answer}
                       </p>
+
+                      {faq.action && (
+                        <div className="mt-6">
+                          <ButtonLink
+                            href={faq.action.href}
+                            target={faq.action.target}
+                            variant="primary"
+                            arrow
+                          >
+                            {faq.action.label}
+                          </ButtonLink>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

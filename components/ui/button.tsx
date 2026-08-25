@@ -17,16 +17,20 @@ export function ButtonLink({
   variant = "primary",
   className,
   arrow = false,
+  target,
 }: {
   href: string;
   children: React.ReactNode;
   variant?: keyof typeof variants;
   className?: string;
   arrow?: boolean;
+  target?: "_blank" | "_self";
 }) {
   return (
     <Link
       href={href}
+      target={target}
+      rel={target === "_blank" ? "noopener noreferrer" : undefined}
       className={cn(
         "inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl px-5 py-3 text-base transition duration-200 focus-visible:outline-2",
         variants[variant],
@@ -34,6 +38,7 @@ export function ButtonLink({
       )}
     >
       {children}
+
       {arrow ? <ArrowRight className="h-4 w-4" aria-hidden="true" /> : null}
     </Link>
   );
