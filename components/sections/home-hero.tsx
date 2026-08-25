@@ -18,7 +18,7 @@ const panelItems = [
 function VerticalBenefitsPanel({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`rounded-4xl bg-forest-900/96 px-5 py-7 text-white shadow-2xl shadow-white/60 ${className}`}
+      className={`rounded-4xl bg-forest-900/96 px-6 py-7 text-white shadow-2xl shadow-white/60 ${className}`}
     >
       <Leaf className="mb-3 h-8 w-8 text-brand-lime" aria-hidden="true" />
 
